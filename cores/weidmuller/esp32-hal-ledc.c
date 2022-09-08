@@ -211,9 +211,9 @@ uint32_t ledcChangeFrequency(uint8_t chan, uint32_t freq, uint8_t bit_num)
 
 static int8_t pin_to_channel[SOC_GPIO_PIN_COUNT] = { 0 };
 static int cnt_channel = LEDC_CHANNELS;
-void analogWrite(uint8_t pin, int value) {
+void analogWrite(uint32_t pin, int value) {
   // Use ledc hardware for internal pins
-  if (pin < SOC_GPIO_PIN_COUNT) {
+  if (pin == AO_0) {
     if (pin_to_channel[pin] == 0) {
       if (!cnt_channel) {
           log_e("No more analogWrite channels available! You can have maximum %u", LEDC_CHANNELS);
@@ -221,8 +221,27 @@ void analogWrite(uint8_t pin, int value) {
       }
       pin_to_channel[pin] = cnt_channel--;
       ledcAttachPin(pin, cnt_channel);
-      ledcSetup(cnt_channel, 1000, 8);
+      ledcSetup(cnt_channel, 5000, 10);
     }
     ledcWrite(pin_to_channel[pin] - 1, value);
   }
 }
+
+void analogWriteResolution(uint8_t resolution){
+	if(resolution > 12) return;
+    
+    uint8_t pin = AO_0;
+    if (pin_to_channel[pin] == 0) {
+      if (!cnt_channel) {
+          log_e("No more analogWrite channels available! You can have maximum %u", LEDC_CHANNELS);
+          return;
+      }
+      pin_to_channel[pin] = cnt_channel--;
+      ledcAttachPin(pin, cnt_channel);
+      ledcSetup(cnt_channel, 5000, resolution);
+      return;
+    }
+
+	ledcSetup(pin_to_channel[pin]- 1, 5000, resolution);
+};
+ 

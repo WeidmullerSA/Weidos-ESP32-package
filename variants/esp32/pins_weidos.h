@@ -26,6 +26,11 @@ static const uint32_t pin27 = DI_6;
 static const uint32_t pin28 = DI_7;
 
 
+//Analog output
+#define AO_0 (26u)
+static const uint32_t pin45 = AO_0;
+
+
 //Digital outputs
 #define DO_0 (0x2100)
 #define DO_1 (0x2101)

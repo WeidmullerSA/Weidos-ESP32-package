@@ -91,7 +91,8 @@ void yield(void);
 #include "esp32-hal-rgb-led.h"
 #include "esp32-hal-cpu.h"
 
-void analogWrite(uint8_t pin, int value);
+void analogWrite(uint32_t pin, int value);
+void analogWriteResolution(uint8_t resolution);
 
 //returns chip temperature in Celsius
 float temperatureRead();
