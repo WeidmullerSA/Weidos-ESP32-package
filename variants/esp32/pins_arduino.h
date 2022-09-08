@@ -1,6 +1,8 @@
 #ifndef Pins_Arduino_h
 #define Pins_Arduino_h
 
+#include "pins_weidos.h"
+
 #include <stdint.h>
 
 #define EXTERNAL_NUM_INTERRUPTS 16
