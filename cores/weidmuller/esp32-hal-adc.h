@@ -37,7 +37,7 @@ typedef enum {
 /*
  * Get ADC value for pin
  * */
-uint16_t analogRead(uint8_t pin);
+uint16_t analogRead(uint32_t pin);
 
 /*
  * Get MilliVolts value for pin

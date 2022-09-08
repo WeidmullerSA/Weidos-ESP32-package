@@ -149,7 +149,7 @@ void __analogReadResolution(uint8_t bits)
 #endif
 }
 
-uint16_t __analogRead(uint8_t pin)
+uint16_t __analogRead(uint32_t pin)
 {
     int8_t channel = digitalPinToAnalogChannel(pin);
     int value = 0;
@@ -265,7 +265,7 @@ int __hallRead()    //hall sensor using idf read
 }
 #endif
 
-extern uint16_t analogRead(uint8_t pin) __attribute__ ((weak, alias("__analogRead")));
+extern uint16_t analogRead(uint32_t pin) __attribute__ ((weak, alias("__analogRead")));
 extern uint32_t analogReadMilliVolts(uint8_t pin) __attribute__ ((weak, alias("__analogReadMilliVolts")));
 extern void analogReadResolution(uint8_t bits) __attribute__ ((weak, alias("__analogReadResolution")));
 extern void analogSetClockDiv(uint8_t clockDiv) __attribute__ ((weak, alias("__analogSetClockDiv")));

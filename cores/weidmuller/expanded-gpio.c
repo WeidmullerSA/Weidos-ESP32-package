@@ -14,14 +14,21 @@ static const uint8_t i2cSoftReset = 0b00000110;
 extern void __pinMode(uint32_t pin, uint8_t mode);
 extern void __digitalWrite(uint32_t pin, uint8_t value);
 extern int __digitalRead(uint32_t pin);
+extern uint16_t __analogRead(uint32_t pin);
 
 #define isExpandedPin(pin) (pin > 0xff)
 #define expandedPinToDeviceAddress(p) ((p >> 8) & 0xff)
+#define expandedPinToDeviceSecondAddress(p) ((p >> 16) & 0xff)
 #define expandedPinToDeviceIndex(p) (p & 0xff)
 
 // MCP23008
 #ifdef HAVE_MCP23008
 #include "peripheral-mcp23008.h"
+#endif
+
+// MAX11613
+#ifdef HAVE_MAX11613
+#include "peripheral-max11613.h"
 #endif
 
 
@@ -107,3 +114,19 @@ int digitalRead(uint32_t pin) {
 	return LOW;
 }
 
+
+
+uint16_t analogRead(uint32_t pin) {
+	if (!isExpandedPin(pin)) {
+		return __analogRead(pin);
+	}
+
+	uint8_t addr = expandedPinToDeviceSecondAddress(pin);
+	uint8_t index = expandedPinToDeviceIndex(pin);
+
+#ifdef HAVE_MAX11613
+	return max11613_get_input(i2cNum, addr, index);
+#endif
+
+	return 0;
+}

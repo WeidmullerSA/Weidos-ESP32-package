@@ -3,6 +3,18 @@
 
 //####Weidmuller####
 
+//Analog/Digital inputs
+#define ADI_0 (0x342001u)
+#define ADI_1 (0x342000u)
+#define ADI_2 (0x342002u)
+#define ADI_3 (0x342003u)
+static const uint32_t pin15 = ADI_0;
+static const uint32_t pin16 = ADI_1;
+static const uint32_t pin17 = ADI_2;
+static const uint32_t pin18 = ADI_3;
+
+
+
 //Digital inputs
 #define DI_4 (35u)
 #define DI_5 (32u)
@@ -25,7 +37,7 @@ static const uint32_t pin57 = DO_2;
 static const uint32_t pin58 = DO_3;
 
 
-
+#define HAVE_MAX11613
 #define HAVE_MCP23008
 static const uint8_t mcp23008Addresses[] = {
 	0x20,

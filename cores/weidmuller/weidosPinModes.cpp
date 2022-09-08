@@ -19,4 +19,10 @@ void weidos_initDefaultIOPins(){
 	pinMode(pin56, OUTPUT); //DO_1
 	pinMode(pin57, OUTPUT); //DO_2
 	pinMode(pin58, OUTPUT); //DO_3
+
+	//Analog  inputs (Can also be used as digital inputs)
+	pinMode(pin15, INPUT);	//ADI_0
+	pinMode(pin16, INPUT);	//ADI_1
+	pinMode(pin17, INPUT);	//ADI_2
+	pinMode(pin18, INPUT);	//ADI_3
 }
