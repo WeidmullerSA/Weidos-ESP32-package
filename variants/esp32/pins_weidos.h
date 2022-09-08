@@ -3,6 +3,25 @@
 
 //####Weidmuller####
 
+//RS485 - UART
+#define A       (17)
+#define B       (16)
+#define Tx_0    (17)
+#define Rx_0    (16)
+#define RTE_DE  (33)
+static const uint32_t pin11 = A;
+static const uint32_t pin12 = B;
+static const uint32_t pin14 = RTE_DE;
+
+//RS485 macros to be used in the library.
+#define HAVE_RS485
+#define HAVE_RS485_HARD
+#define SERIAL_PORT_HARDWARE        Serial2
+#define RS485_TX 					(17)             	 
+#define RS485_DE 					(33)              
+#define RS485_RE 					(33) 
+
+
 //Analog/Digital inputs
 #define ADI_0 (0x342001u)
 #define ADI_1 (0x342000u)
