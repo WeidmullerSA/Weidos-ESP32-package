@@ -2,6 +2,8 @@
 #include "freertos/task.h"
 #include "esp_task_wdt.h"
 #include "Arduino.h"
+#include "weidosPinModes.h"
+
 #if (ARDUINO_USB_CDC_ON_BOOT|ARDUINO_USB_MSC_ON_BOOT|ARDUINO_USB_DFU_ON_BOOT) && !ARDUINO_USB_MODE
 #include "USB.h"
 #if ARDUINO_USB_MSC_ON_BOOT
@@ -39,6 +41,8 @@ __attribute__((weak)) size_t getArduinoLoopTaskStackSize(void) {
 
 void loopTask(void *pvParameters)
 {
+    weidos_initDefaultIOPins();
+    
     setup();
     for(;;) {
 #if CONFIG_FREERTOS_UNICORE
