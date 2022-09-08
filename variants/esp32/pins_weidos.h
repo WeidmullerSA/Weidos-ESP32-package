@@ -20,7 +20,8 @@ static const uint32_t pin14 = RTE_DE;
 #define RS485_TX 					(17)             	 
 #define RS485_DE 					(33)              
 #define RS485_RE 					(33) 
-
+//UART macro to use Serial1 with this name.
+#define UART Serial2
 
 //Analog/Digital inputs
 #define ADI_0 (0x342001u)
