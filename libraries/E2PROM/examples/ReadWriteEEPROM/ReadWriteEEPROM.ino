@@ -1,3 +1,17 @@
+/**
+Copyright (C) 2021 Weidmüller SA. All rights reserved.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
 /*
   Read/Write EEPROM example
 
@@ -6,7 +20,7 @@
 
   
   First, it shows how to read/write a cell (1 byte) from the EEPROM.
-  Then two objects, an double and an integer with known values,
+  Then two objects, a double and an integer with known values,
   will be saved with E2PROM method put(); this value will be
   recovered with method get() and stored to a new variables intialized to 0.
   To check that the put/get methods were successful, those new
