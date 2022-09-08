@@ -71,9 +71,9 @@ extern "C" {
 #define digitalPinToRtcPin(pin)         ((RTC_GPIO_IS_VALID_GPIO(pin))?rtc_io_number_get(pin):-1) 
 #define digitalPinToDacChannel(pin)     (((pin) == DAC_CHANNEL_1_GPIO_NUM)?0:((pin) == DAC_CHANNEL_2_GPIO_NUM)?1:-1)
 
-void pinMode(uint8_t pin, uint8_t mode);
-void digitalWrite(uint8_t pin, uint8_t val);
-int digitalRead(uint8_t pin);
+void pinMode(uint32_t pin, uint8_t mode);
+void digitalWrite(uint32_t pin, uint8_t val);
+int digitalRead(uint32_t pin);
 
 void attachInterrupt(uint8_t pin, void (*)(void), int mode);
 void attachInterruptArg(uint8_t pin, void (*)(void*), void * arg, int mode);

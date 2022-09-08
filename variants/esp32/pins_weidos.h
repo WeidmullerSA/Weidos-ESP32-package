@@ -24,5 +24,15 @@ static const uint32_t pin56 = DO_1;
 static const uint32_t pin57 = DO_2;
 static const uint32_t pin58 = DO_3;
 
+
+
+#define HAVE_MCP23008
+static const uint8_t mcp23008Addresses[] = {
+	0x20,
+	0x21,
+	0x23
+};
+#define NUM_MCP23008_DEVICES (sizeof(mcp23008Addresses) / sizeof(uint8_t))
+
 //####Weidmuller####
 #endif

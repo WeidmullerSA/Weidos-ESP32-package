@@ -40,6 +40,8 @@
 #include "stdlib_noniso.h"
 #include "binary.h"
 
+#include "expanded-gpio.h"
+
 #define PI 3.1415926535897932384626433832795
 #define HALF_PI 1.5707963267948966192313216916398
 #define TWO_PI 6.283185307179586476925286766559

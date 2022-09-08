@@ -89,7 +89,7 @@ static InterruptHandle_t __pinInterruptHandlers[SOC_GPIO_PIN_COUNT] = {0,};
 
 #include "driver/rtc_io.h"
 
-extern void ARDUINO_ISR_ATTR __pinMode(uint8_t pin, uint8_t mode)
+extern void ARDUINO_ISR_ATTR __pinMode(uint32_t pin, uint8_t mode)
 {
 #ifdef BOARD_HAS_NEOPIXEL
     if (pin == LED_BUILTIN){
@@ -132,7 +132,7 @@ extern void ARDUINO_ISR_ATTR __pinMode(uint8_t pin, uint8_t mode)
     }
 }
 
-extern void ARDUINO_ISR_ATTR __digitalWrite(uint8_t pin, uint8_t val)
+extern void ARDUINO_ISR_ATTR __digitalWrite(uint32_t pin, uint8_t val)
 {
     #ifdef BOARD_HAS_NEOPIXEL
         if(pin == LED_BUILTIN){
@@ -145,7 +145,7 @@ extern void ARDUINO_ISR_ATTR __digitalWrite(uint8_t pin, uint8_t val)
 	gpio_set_level((gpio_num_t)pin, val);
 }
 
-extern int ARDUINO_ISR_ATTR __digitalRead(uint8_t pin)
+extern int ARDUINO_ISR_ATTR __digitalRead(uint32_t pin)
 {
 	return gpio_get_level((gpio_num_t)pin);
 }
@@ -225,9 +225,9 @@ extern void __detachInterrupt(uint8_t pin)
 }
 
 
-extern void pinMode(uint8_t pin, uint8_t mode) __attribute__ ((weak, alias("__pinMode")));
-extern void digitalWrite(uint8_t pin, uint8_t val) __attribute__ ((weak, alias("__digitalWrite")));
-extern int digitalRead(uint8_t pin) __attribute__ ((weak, alias("__digitalRead")));
+extern void pinMode(uint32_t pin, uint8_t mode) __attribute__ ((weak, alias("__pinMode")));
+extern void digitalWrite(uint32_t pin, uint8_t val) __attribute__ ((weak, alias("__digitalWrite")));
+extern int digitalRead(uint32_t pin) __attribute__ ((weak, alias("__digitalRead")));
 extern void attachInterrupt(uint8_t pin, voidFuncPtr handler, int mode) __attribute__ ((weak, alias("__attachInterrupt")));
 extern void attachInterruptArg(uint8_t pin, voidFuncPtrArg handler, void * arg, int mode) __attribute__ ((weak, alias("__attachInterruptArg")));
 extern void detachInterrupt(uint8_t pin) __attribute__ ((weak, alias("__detachInterrupt")));
