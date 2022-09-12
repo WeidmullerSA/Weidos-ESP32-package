@@ -25,4 +25,13 @@ void weidos_initDefaultIOPins(){
 	pinMode(pin16, INPUT);	//ADI_1
 	pinMode(pin17, INPUT);	//ADI_2
 	pinMode(pin18, INPUT);	//ADI_3
+
+	pinMode(SDCARD_SS_PIN, OUTPUT);
+	digitalWrite(SDCARD_SS_PIN, HIGH);
+
+	pinMode(ETHERNET_CS, OUTPUT);
+	digitalWrite(ETHERNET_CS, HIGH);
+
+	pinMode(CS, OUTPUT);
+	digitalWrite(CS, HIGH);
 }
