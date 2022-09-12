@@ -1,127 +1,141 @@
-
-
-##########################################
-##### WEIDOS-ESP32 #######################
-##########################################
-
-weidosESP32.name=WEIDOS-ESP32
-
-weidosESP32.bootloader.tool=esptool_py
-weidosESP32.bootloader.tool.default=esptool_py
-
-weidosESP32.upload.tool=esptool_py
-weidosESP32.upload.maximum_size=1310720
-weidosESP32.upload.maximum_data_size=327680
-weidosESP32.upload.speed=921600
-weidosESP32.upload.wait_for_upload_port=true
-weidosESP32.upload.flags=
-weidosESP32.upload.extra_flags=
-
-weidosESP32.serial.disableDTR=true
-weidosESP32.serial.disableRTS=true
-
-weidosESP32.build.tarch=xtensa
-weidosESP32.build.bootloader_addr=0x1000
-weidosESP32.build.target=esp32
-weidosESP32.build.mcu=esp32
-weidosESP32.build.core=weidmuller
-weidosESP32.build.variant=esp32
-weidosESP32.build.board=ESP32_DEV
-weidosESP32.build.extra_flags= -DESP32
-
-weidosESP32.build.f_cpu=240000000L
-weidosESP32.build.flash_size=4MB
-weidosESP32.build.flash_freq=80m
-weidosESP32.build.flash_mode=dio
-weidosESP32.build.boot=dio
-weidosESP32.build.partitions=default
-weidosESP32.build.defines=
-weidosESP32.build.loop_core=
-weidosESP32.build.event_core=
-weidosESP32.build.code_debug=0
-
-
-
+# Copyright (C) 2021 Weidmüller SA. All rights reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 ##########################################
-##### WEIDOS-ESP32-LORA ##################
+##### WEIDOS-ESP32-A1 #######################
 ##########################################
 
-weidosESP32LoRa.name=WEIDOS-ESP32-LoRa
+weidosESP32A1.name=WEIDOS-ESP32-A1
 
-weidosESP32LoRa.bootloader.tool=esptool_py
-weidosESP32LoRa.bootloader.tool.default=esptool_py
+weidosESP32A1.bootloader.tool=esptool_py
+weidosESP32A1.bootloader.tool.default=esptool_py
 
-weidosESP32LoRa.upload.tool=esptool_py		
-weidosESP32LoRa.upload.maximum_size=1310720
-weidosESP32LoRa.upload.maximum_data_size=327680
-weidosESP32LoRa.upload.speed=921600
-weidosESP32LoRa.upload.wait_for_upload_port=true
-weidosESP32LoRa.upload.flags=
-weidosESP32LoRa.upload.extra_flags=
+weidosESP32A1.upload.tool=esptool_py
+weidosESP32A1.upload.maximum_size=1310720
+weidosESP32A1.upload.maximum_data_size=327680
+weidosESP32A1.upload.speed=921600
+weidosESP32A1.upload.wait_for_upload_port=true
+weidosESP32A1.upload.flags=
+weidosESP32A1.upload.extra_flags=
 
-weidosESP32LoRa.serial.disableDTR=true
-weidosESP32LoRa.serial.disableRTS=true
+weidosESP32A1.serial.disableDTR=true
+weidosESP32A1.serial.disableRTS=true
 
-weidosESP32LoRa.build.tarch=xtensa
-weidosESP32LoRa.build.bootloader_addr=0x1000
-weidosESP32LoRa.build.target=esp32
-weidosESP32LoRa.build.mcu=esp32
-weidosESP32LoRa.build.core=weidmuller
-weidosESP32LoRa.build.variant=esp32
-weidosESP32LoRa.build.board=ESP32_DEV
-weidosESP32LoRa.build.extra_flags= -DESP32
+weidosESP32A1.build.tarch=xtensa
+weidosESP32A1.build.bootloader_addr=0x1000
+weidosESP32A1.build.target=esp32
+weidosESP32A1.build.mcu=esp32
+weidosESP32A1.build.core=weidmuller
+weidosESP32A1.build.variant=esp32
+weidosESP32A1.build.board=ESP32_DEV
+weidosESP32A1.build.extra_flags= -DESP32
 
-weidosESP32LoRa.build.f_cpu=240000000L
-weidosESP32LoRa.build.flash_size=4MB
-weidosESP32LoRa.build.flash_freq=80m
-weidosESP32LoRa.build.flash_mode=dio
-weidosESP32LoRa.build.boot=dio
-weidosESP32LoRa.build.partitions=default
-weidosESP32LoRa.build.defines=
-weidosESP32LoRa.build.loop_core=
-weidosESP32LoRa.build.event_core=
-weidosESP32LoRa.build.code_debug=0
+weidosESP32A1.build.f_cpu=240000000L
+weidosESP32A1.build.flash_size=4MB
+weidosESP32A1.build.flash_freq=80m
+weidosESP32A1.build.flash_mode=dio
+weidosESP32A1.build.boot=dio
+weidosESP32A1.build.partitions=default
+weidosESP32A1.build.defines=
+weidosESP32A1.build.loop_core=
+weidosESP32A1.build.event_core=
+weidosESP32A1.build.code_debug=0
 
 
 
 
 ##########################################
-##### WEIDOS-ESP32-NBIOT #################
+##### WEIDOS-ESP32-LORA-A1 ##################
 ##########################################
 
-weidosESP32NBIoT.name=WEIDOS-ESP32-NBIoT
+weidosESP32LoRaA1.name=WEIDOS-ESP32-LORA-A1
 
-weidosESP32NBIoT.bootloader.tool=esptool_py
-weidosESP32NBIoT.bootloader.tool.default=esptool_py
+weidosESP32LoRaA1.bootloader.tool=esptool_py
+weidosESP32LoRaA1.bootloader.tool.default=esptool_py
 
-weidosESP32NBIoT.upload.tool=esptool_py		
-weidosESP32NBIoT.upload.maximum_size=1310720
-weidosESP32NBIoT.upload.maximum_data_size=327680
-weidosESP32NBIoT.upload.speed=921600
-weidosESP32NBIoT.upload.wait_for_upload_port=true
-weidosESP32NBIoT.upload.flags=
-weidosESP32NBIoT.upload.extra_flags=
+weidosESP32LoRaA1.upload.tool=esptool_py		
+weidosESP32LoRaA1.upload.maximum_size=1310720
+weidosESP32LoRaA1.upload.maximum_data_size=327680
+weidosESP32LoRaA1.upload.speed=921600
+weidosESP32LoRaA1.upload.wait_for_upload_port=true
+weidosESP32LoRaA1.upload.flags=
+weidosESP32LoRaA1.upload.extra_flags=
 
-weidosESP32NBIoT.serial.disableDTR=true
-weidosESP32NBIoT.serial.disableRTS=true
+weidosESP32LoRaA1.serial.disableDTR=true
+weidosESP32LoRaA1.serial.disableRTS=true
 
-weidosESP32NBIoT.build.tarch=xtensa
-weidosESP32NBIoT.build.bootloader_addr=0x1000
-weidosESP32NBIoT.build.target=esp32
-weidosESP32NBIoT.build.mcu=esp32
-weidosESP32NBIoT.build.core=weidmuller
-weidosESP32NBIoT.build.variant=esp32
-weidosESP32NBIoT.build.board=ESP32_DEV
-weidosESP32NBIoT.build.extra_flags= -DESP32
+weidosESP32LoRaA1.build.tarch=xtensa
+weidosESP32LoRaA1.build.bootloader_addr=0x1000
+weidosESP32LoRaA1.build.target=esp32
+weidosESP32LoRaA1.build.mcu=esp32
+weidosESP32LoRaA1.build.core=weidmuller
+weidosESP32LoRaA1.build.variant=esp32
+weidosESP32LoRaA1.build.board=ESP32_DEV
+weidosESP32LoRaA1.build.extra_flags= -DESP32
 
-weidosESP32NBIoT.build.f_cpu=240000000L
-weidosESP32NBIoT.build.flash_size=4MB
-weidosESP32NBIoT.build.flash_freq=80m
-weidosESP32NBIoT.build.flash_mode=dio
-weidosESP32NBIoT.build.boot=dio
-weidosESP32NBIoT.build.partitions=default
-weidosESP32NBIoT.build.defines=
-weidosESP32NBIoT.build.loop_core=
-weidosESP32NBIoT.build.event_core=
-weidosESP32NBIoT.build.code_debug=0
+weidosESP32LoRaA1.build.f_cpu=240000000L
+weidosESP32LoRaA1.build.flash_size=4MB
+weidosESP32LoRaA1.build.flash_freq=80m
+weidosESP32LoRaA1.build.flash_mode=dio
+weidosESP32LoRaA1.build.boot=dio
+weidosESP32LoRaA1.build.partitions=default
+weidosESP32LoRaA1.build.defines=
+weidosESP32LoRaA1.build.loop_core=
+weidosESP32LoRaA1.build.event_core=
+weidosESP32LoRaA1.build.code_debug=0
+
+
+
+
+##########################################
+##### WEIDOS-ESP32-NBIOT-A1 ##############
+##########################################
+
+weidosESP32NBIoTA1.name=WEIDOS-ESP32-NBIOT-A1
+
+weidosESP32NBIoTA1.bootloader.tool=esptool_py
+weidosESP32NBIoTA1.bootloader.tool.default=esptool_py
+
+weidosESP32NBIoTA1.upload.tool=esptool_py		
+weidosESP32NBIoTA1.upload.maximum_size=1310720
+weidosESP32NBIoTA1.upload.maximum_data_size=327680
+weidosESP32NBIoTA1.upload.speed=921600
+weidosESP32NBIoTA1.upload.wait_for_upload_port=true
+weidosESP32NBIoTA1.upload.flags=
+weidosESP32NBIoTA1.upload.extra_flags=
+
+weidosESP32NBIoTA1.serial.disableDTR=true
+weidosESP32NBIoTA1.serial.disableRTS=true
+
+weidosESP32NBIoTA1.build.tarch=xtensa
+weidosESP32NBIoTA1.build.bootloader_addr=0x1000
+weidosESP32NBIoTA1.build.target=esp32
+weidosESP32NBIoTA1.build.mcu=esp32
+weidosESP32NBIoTA1.build.core=weidmuller
+weidosESP32NBIoTA1.build.variant=esp32
+weidosESP32NBIoTA1.build.board=ESP32_DEV
+weidosESP32NBIoTA1.build.extra_flags= -DESP32
+
+weidosESP32NBIoTA1.build.f_cpu=240000000L
+weidosESP32NBIoTA1.build.flash_size=4MB
+weidosESP32NBIoTA1.build.flash_freq=80m
+weidosESP32NBIoTA1.build.flash_mode=dio
+weidosESP32NBIoTA1.build.boot=dio
+weidosESP32NBIoTA1.build.partitions=default
+weidosESP32NBIoTA1.build.defines=
+weidosESP32NBIoTA1.build.loop_core=
+weidosESP32NBIoTA1.build.event_core=
+weidosESP32NBIoTA1.build.code_debug=0
