@@ -46,9 +46,28 @@ static const uint32_t pin27 = DI_6;
 static const uint32_t pin28 = DI_7;
 
 
+
+//Multifunction pins
+#define MF_0    (27)
+#define MF_1    (4)
+static const uint32_t pin41 = MF_0;
+static const uint32_t pin42 = MF_1;
+
+
 //Analog output
 #define AO_0 (26u)
 static const uint32_t pin45 = AO_0;
+
+
+//SPI pins
+#define MISO_0  (19)
+#define MOSI_0  (23)
+#define SCK_0   (18)
+#define CS      (25)
+static const uint32_t pin51 = MISO_0;
+static const uint32_t pin52 = MOSI_0;
+static const uint32_t pin53 = SCK_0;
+static const uint32_t pin54 = CS;
 
 
 //Digital outputs
@@ -61,6 +80,14 @@ static const uint32_t pin56 = DO_1;
 static const uint32_t pin57 = DO_2;
 static const uint32_t pin58 = DO_3;
 
+
+//I2C pins
+#define SDA_0  (21)
+#define SCL_0  (22)
+static const uint32_t pin61 = SDA_0;
+static const uint32_t pin62 =SCL_0;
+
+//Macros for libraries
 #define SDCARD_SS_PIN (0x2106u)    	//SD slave select/chip select
 #define ETHERNET_CS (2u)            //Ethernet slave select/chip select
 
