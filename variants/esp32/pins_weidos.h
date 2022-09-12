@@ -62,7 +62,7 @@ static const uint32_t pin57 = DO_2;
 static const uint32_t pin58 = DO_3;
 
 #define SDCARD_SS_PIN (0x2106u)    	//SD slave select/chip select
-
+#define ETHERNET_CS (2u)            //Ethernet slave select/chip select
 
 #define HAVE_MAX11613
 #define HAVE_MCP23008
