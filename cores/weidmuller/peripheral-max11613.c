@@ -89,7 +89,7 @@ uint16_t max11613_get_input(uint8_t i2cNum, uint8_t addr, uint8_t index) {
 
 	delay(1);
 
-	uint8_t convReg = 0;
+	//uint8_t convReg = 0;
 	size_t len = 0;
 
 	if(i2cRead(i2cNum, addr, buffer, 2, i2cTimeout, &len)){
