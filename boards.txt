@@ -63,6 +63,7 @@ weidosESP32LoRaA1.name=WEIDOS-ESP32-LORA-A1
 weidosESP32LoRaA1.bootloader.tool=esptool_py
 weidosESP32LoRaA1.bootloader.tool.default=esptool_py
 
+weidosESP32LoRaA1.upload.tool=esptool_py
 weidosESP32LoRaA1.upload.tool.default=esptool_py		
 weidosESP32LoRaA1.upload.maximum_size=1310720
 weidosESP32LoRaA1.upload.maximum_data_size=327680
@@ -106,6 +107,7 @@ weidosESP32NBIoTA1.name=WEIDOS-ESP32-NBIOT-A1
 weidosESP32NBIoTA1.bootloader.tool=esptool_py
 weidosESP32NBIoTA1.bootloader.tool.default=esptool_py
 
+weidosESP32NBIoTA1.upload.tool=esptool_py
 weidosESP32NBIoTA1.upload.tool.default=esptool_py	
 weidosESP32NBIoTA1.upload.maximum_size=1310720
 weidosESP32NBIoTA1.upload.maximum_data_size=327680
