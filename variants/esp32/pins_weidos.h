@@ -19,13 +19,13 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //####Weidmuller####
 
 //RS485 - UART
-#define A       (17)
-#define B       (16)
+#define A_RS485 (17)
+#define B_RS485 (16)
 #define Tx_0    (17)
 #define Rx_0    (16)
 #define RTE_DE  (33)
-static const uint32_t pin11 = A;
-static const uint32_t pin12 = B;
+static const uint32_t pin11 = A_RS485;
+static const uint32_t pin12 = B_RS485;
 static const uint32_t pin14 = RTE_DE;
 
 //RS485 macros to be used in the library.
