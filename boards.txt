@@ -126,7 +126,7 @@ weidosESP32NBIoTA1.build.mcu=esp32
 weidosESP32NBIoTA1.build.core=weidmuller
 weidosESP32NBIoTA1.build.variant=esp32
 weidosESP32NBIoTA1.build.board=ESP32_DEV
-weidosESP32NBIoTA1.build.extra_flags= -DESP32
+weidosESP32NBIoTA1.build.extra_flags= -DESP32 -DWEIDOS_LORA
 
 weidosESP32NBIoTA1.build.f_cpu=240000000L
 weidosESP32NBIoTA1.build.flash_size=4MB
