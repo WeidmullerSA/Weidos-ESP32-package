@@ -116,7 +116,7 @@ static const uint8_t mcp23008Addresses[] = {
 #define NUM_MCP23008_DEVICES (sizeof(mcp23008Addresses) / sizeof(uint8_t))
 
 // LoRa module
-#if defined(WEIDOS_LORA)
+#ifdef WEIDOS_LORA
 #define HAVE_RN2XX3
 #define HAVE_PIC
 #define RN2XX3_RESET_PIN (0x2301)
