@@ -1,16 +1,31 @@
+/*
+Copyright (C) 2022 Weidmüller SA. All rights reserved.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
 #ifndef PINS_WEIDOS_H
 #define PINS_WEIDOS_H
 
 //####Weidmuller####
 
 //RS485 - UART
-#define A       (17)
-#define B       (16)
+#define A_RS485 (17)
+#define B_RS485 (16)
 #define Tx_0    (17)
 #define Rx_0    (16)
 #define RTE_DE  (33)
-static const uint32_t pin11 = A;
-static const uint32_t pin12 = B;
+static const uint32_t pin11 = A_RS485;
+static const uint32_t pin12 = B_RS485;
 static const uint32_t pin14 = RTE_DE;
 
 //RS485 macros to be used in the library.
@@ -99,6 +114,13 @@ static const uint8_t mcp23008Addresses[] = {
 	0x23
 };
 #define NUM_MCP23008_DEVICES (sizeof(mcp23008Addresses) / sizeof(uint8_t))
+
+// LoRa module
+#ifdef WEIDOS_LORA
+#define HAVE_RN2XX3
+#define HAVE_PIC
+#define RN2XX3_RESET_PIN (0x2301)
+#endif
 
 //####Weidmuller####
 #endif
