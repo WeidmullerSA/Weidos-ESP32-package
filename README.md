@@ -9,9 +9,10 @@ This repository contains the source code and configuration files of the Weidos E
 	- Add the following URL in "Additional Boards Manager URLs" (https://raw.githubusercontent.com/WeidmullerSA/Weidos-index/main/package_weidmuller_index.json)
 
 2- Restart Arduino IDE
-3- In Tools/Board/Boards Manager...
-	- Search WEIDOS-ESP32 and install the latest version.
-4- Boards installed. You can select your Weidos-ESP32 in Tools/Boards/Weidos-ESP32/
+
+3- In Tools/Board/Boards Manager... --> Search WEIDOS-ESP32 and install the latest version.
+	
+4- Boards installed. You can select your WEIDOS-ESP32 in Tools/Boards/WEIDOS-ESP32/
 
 
 ## Support
