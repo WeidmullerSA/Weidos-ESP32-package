@@ -82,7 +82,7 @@ weidosESP32LoRaA1.build.mcu=esp32
 weidosESP32LoRaA1.build.core=weidmuller
 weidosESP32LoRaA1.build.variant=esp32
 weidosESP32LoRaA1.build.board=ESP32_DEV
-weidosESP32LoRaA1.build.extra_flags= -DESP32
+weidosESP32LoRaA1.build.extra_flags= -DESP32 -DWEIDOS_LORA
 
 weidosESP32LoRaA1.build.f_cpu=240000000L
 weidosESP32LoRaA1.build.flash_size=4MB
