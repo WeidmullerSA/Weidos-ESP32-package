@@ -122,5 +122,13 @@ static const uint8_t mcp23008Addresses[] = {
 #define RN2XX3_RESET_PIN (0x2301)
 #endif
 
+// SARA R412 NB-IoT Module
+#ifdef WEIDOS_NBIOT
+#define HAVE_PIC
+#define SARA_RESETN (0x2301)
+#define SARA_PWR_ON (0x2300)
+#define SerialSARA                   SerialPIC
+#endif
+
 //####Weidmuller####
 #endif
