@@ -1,3 +1,22 @@
+Weidos ESP32 package 1.1.0  2024.01.15
+
+Improvements
+* Added extraflag NBIOT
+* Define SARA_R412 pins in pins_weidos file
+* Change core hardwareserial functions to virtual
+* Added Library for NB-IOT board
+* Udate HardwareSerialPIC library with bugfixes
+
+Bugfixes
+* HardwareSerialPIC lose of data  
+
+
+New Boards & updates
+* Weidos-ESP32-NBIOT-A1 board
+
+
+////////////////////////////////////////////////
+
 Weidos ESP32 package 1.0.1  2022.12.19
 
 Improvements

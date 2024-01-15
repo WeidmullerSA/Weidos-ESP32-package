@@ -8,6 +8,7 @@
 
 
 #define PIC_I2C_ADDRESS 120
+#define RX_BUFFER 1500
 
 class HardwareSerialPIC : public HardwareSerial {
 	public:
@@ -30,15 +31,17 @@ class HardwareSerialPIC : public HardwareSerial {
 		HardwareSerialPIC(uint8_t i2cAddr = PIC_I2C_ADDRESS);
 
 	public:
-		void begin();
+		// virtual void begin(unsigned long baud);
+  		virtual void begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin, bool invert, unsigned long timeout_ms, uint8_t rxfifo_full_thrhd);
+        virtual void begin(unsigned long baud, uint16_t config); 
 		virtual void end();
 		virtual void reset();
 
-		void setBaudrate(unsigned long baud = BaudRate_57600);
+		void setBaudrate(unsigned long baud);
 
 		virtual size_t write(uint8_t value);
 		virtual size_t write(const uint8_t* buff, size_t size);
-		using HardwareSerial::write;
+		//using HardwareSerial::write;
 		virtual int available();
 		virtual int availableForWrite();
 		virtual int read();
@@ -50,9 +53,14 @@ class HardwareSerialPIC : public HardwareSerial {
 
 	private:
 		uint8_t i2cAddr;
+		uint16_t _pendingBufferReadBytes;
+		uint8_t _bufferReadBytes[RX_BUFFER];
+		uint16_t _counterReadBytes;
+		uint16_t _updatedReadBytes;
+		int readAndSave(void);
 };
 
 extern HardwareSerialPIC SerialPIC;
-#endif
+#endif  // HAVE_PIC
 
 #endif  // __HARDWARE_SERIAL_PIC_H__
