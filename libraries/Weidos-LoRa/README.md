@@ -1,4 +1,4 @@
-# Weidos-MKR-LoRa-library
+# Weidos-LoRa-library
 
 
 NOTE: this library inherits from RN2483-Arduino-Library developed by jpmeijers.
